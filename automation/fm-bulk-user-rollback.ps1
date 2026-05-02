@@ -5,7 +5,7 @@
     Ticket: REQ0042001
 
 .DESCRIPTION
-    Provides two rollback scenarios for Fairmount Manufacturing user provisioning:
+    Provides two rollback scenarios for Fairmont Manufacturing user provisioning:
 
     Scenario A — Targeted Single User Rollback
         Removes or remediates a specific user without affecting other accounts.

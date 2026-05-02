@@ -90,7 +90,7 @@ $StartTime = Get-Date
 
 Write-Host ""
 Write-Host "============================================================" -ForegroundColor Cyan
-Write-Host " Fairmount Manufacturing — Bulk User Provisioning" -ForegroundColor Cyan
+Write-Host " Fairmont Manufacturing — Bulk User Provisioning" -ForegroundColor Cyan
 Write-Host " Ticket     : $TicketNumber" -ForegroundColor Cyan
 Write-Host " Started    : $StartTime" -ForegroundColor Cyan
 Write-Host " Target OU  : $OU" -ForegroundColor Cyan

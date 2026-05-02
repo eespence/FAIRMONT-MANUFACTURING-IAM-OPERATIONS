@@ -91,7 +91,7 @@ param (
 
 $OU        = "OU=IAM-PAM-Users,DC=iampam,DC=lab"
 $SyncGroup = "AAD-Sync-Users"
-$Password  = ConvertTo-SecureString "Welcome@Fairmount2026!" -AsPlainText -Force
+$Password  = ConvertTo-SecureString "Welcome@Fairmont2026!" -AsPlainText -Force
 
 # ============================================================
 # SETUP
