@@ -565,9 +565,9 @@ Secrets were placed into the correct department folders.
 - Username: `svc.it.fairmont`
 - Password: (generate)
 
-![Engineering Folder Secret](screenshots/lab01_13A_engineering_folder_svc.eng.fairmount.png)
-![Finance Folder Secret](screenshots/lab01_13B_finance_folder_svc.fin.fairmount.png)
-![IT Security Folder Secret](screenshots/lab01_13C_it_security_folder_svc.it.fairmount.png)
+![Engineering Folder Secret](screenshots/lab01_13A_engineering_folder_svc.eng.fairmont.png)
+![Finance Folder Secret](screenshots/lab01_13B_finance_folder_svc.fin.fairmont.png)
+![IT Security Folder Secret](screenshots/lab01_13C_it_security_folder_svc.it.fairmont.png)
 
 ---
 
