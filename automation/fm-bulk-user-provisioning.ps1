@@ -2,11 +2,11 @@
 #Requires -Modules ActiveDirectory
 <#
 .SYNOPSIS
-    Fairmount Manufacturing LLC — Bulk User Provisioning Script
+    Fairmont Manufacturing LLC — Bulk User Provisioning Script
     Ticket: REQ0042001
 
 .DESCRIPTION
-    Provisions 10 Fairmount Manufacturing employee accounts in Active Directory
+    Provisions 10 Fairmont Manufacturing employee accounts in Active Directory
     across Engineering, Finance, and IT/Security departments.
 
     Each user is:
@@ -28,7 +28,7 @@
     OU Target:   OU=IAM-PAM-Users,DC=iampam,DC=lab
     Sync Group:  AAD-Sync-Users (CRITICAL — controls Entra Connect scope)
     Run From:    MGMT01 as adm-t0-administrator
-    Repo:        fairmount-manufacturing-iam-operations
+    Repo:        fairmont-manufacturing-iam-operations
 
 .PARAMETER LogPath
     Optional. Directory for log output. Default: C:\Logs
@@ -59,7 +59,7 @@ param (
 $OU        = "OU=IAM-PAM-Users,DC=iampam,DC=lab"
 $Domain    = "fairmontmanufacturing.onmicrosoft.com"
 $SyncGroup = "AAD-Sync-Users"
-$Password  = ConvertTo-SecureString "Welcome@Fairmount2026!" -AsPlainText -Force
+$Password  = ConvertTo-SecureString "Welcome@Fairmont2026!" -AsPlainText -Force
 
 # User roster — all names are entirely fictional
 $Users = @(
@@ -357,4 +357,4 @@ if ($Failed -eq 0 -and $SyncFailed -eq 0) {
     Write-Host "   Proceed to Phase 2 — verify users appear in Entra ID." -ForegroundColor Green
     Write-Host ""
 }
-'@ | Set-Content -Path "C:\Scripts\Fairmount\fm-bulk-user-provisioning.ps1" -Encoding UTF8
+'@ | Set-Content -Path "C:\Scripts\Fairmont\fm-bulk-user-provisioning.ps1" -Encoding UTF8

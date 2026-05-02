@@ -1,7 +1,7 @@
 #Requires -Modules ActiveDirectory
 <#
 .SYNOPSIS
-    Fairmount Manufacturing LLC — Bulk User Rollback Script
+    Fairmont Manufacturing LLC — Bulk User Rollback Script
     Ticket: REQ0042001
 
 .DESCRIPTION
@@ -14,7 +14,7 @@
             - Remove single user completely from AD and AAD-Sync-Users
 
     Scenario B — Full Bulk Rollback
-        Removes all 10 Fairmount Manufacturing users from:
+        Removes all 10 Fairmont Manufacturing users from:
             - AAD-Sync-Users (sync scope — removed FIRST)
             - Active Directory
         Triggers Entra Connect delta sync to remove orphan cloud accounts.
@@ -29,7 +29,7 @@
     Domain:      iampam.lab
     Sync Group:  AAD-Sync-Users (CRITICAL — remove from this BEFORE AD deletion)
     Run From:    MGMT01 as adm-t0-administrator
-    Repo:        fairmount-manufacturing-iam-operations
+    Repo:        fairmont-manufacturing-iam-operations
 
 .PARAMETER Scenario
     A = Targeted single user rollback
@@ -118,7 +118,7 @@ $StartTime = Get-Date
 
 Write-Host ""
 Write-Host "============================================================" -ForegroundColor Yellow
-Write-Host " Fairmount Manufacturing — User Rollback Script" -ForegroundColor Yellow
+Write-Host " Fairmont Manufacturing — User Rollback Script" -ForegroundColor Yellow
 Write-Host " Ticket   : $TicketNumber" -ForegroundColor Yellow
 Write-Host " Scenario : $Scenario" -ForegroundColor Yellow
 Write-Host " Started  : $StartTime" -ForegroundColor Yellow
@@ -399,9 +399,9 @@ if ($Scenario -eq "B") {
     Write-Host "--- Vault Secret Cleanup Required (Manual) ---" -ForegroundColor Yellow
     Write-Host ""
     Write-Host "  Run on PAMVAULT01:" -ForegroundColor White
-    Write-Host "  vault kv delete secret/fairmount/engineering" -ForegroundColor Cyan
-    Write-Host "  vault kv delete secret/fairmount/finance" -ForegroundColor Cyan
-    Write-Host "  vault kv delete secret/fairmount/it" -ForegroundColor Cyan
+    Write-Host "  vault kv delete secret/fairmont/engineering" -ForegroundColor Cyan
+    Write-Host "  vault kv delete secret/fairmont/finance" -ForegroundColor Cyan
+    Write-Host "  vault kv delete secret/fairmont/it" -ForegroundColor Cyan
     Write-Host ""
     Write-Host "  Remove LDAP group mappings if no longer needed:" -ForegroundColor White
     Write-Host "  vault delete auth/ldap/groups/IT-Admins" -ForegroundColor Cyan
@@ -414,10 +414,10 @@ if ($Scenario -eq "B") {
     Write-Host "--- Delinea Cleanup Required (Manual) ---" -ForegroundColor Yellow
     Write-Host ""
     Write-Host "  Navigate to https://delinea01.iampam.lab and delete:" -ForegroundColor White
-    Write-Host "  1. Secrets in Fairmount Manufacturing/Engineering" -ForegroundColor White
-    Write-Host "  2. Secrets in Fairmount Manufacturing/Finance" -ForegroundColor White
-    Write-Host "  3. Secrets in Fairmount Manufacturing/IT-Security" -ForegroundColor White
-    Write-Host "  4. Fairmount Manufacturing parent folder" -ForegroundColor White
+    Write-Host "  1. Secrets in Fairmont Manufacturing/Engineering" -ForegroundColor White
+    Write-Host "  2. Secrets in Fairmont Manufacturing/Finance" -ForegroundColor White
+    Write-Host "  3. Secrets in Fairmont Manufacturing/IT-Security" -ForegroundColor White
+    Write-Host "  4. Fairmont Manufacturing parent folder" -ForegroundColor White
     Write-Host ""
 
     # --- Final Entra verification sync ---

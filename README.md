@@ -7,10 +7,10 @@
 ![CMMC](https://img.shields.io/badge/CMMC-Level_2-blue?style=flat)
 ![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE?style=flat&logo=powershell&logoColor=white)
 
-# fairmount-manufacturing-iam-operations
+# fairmont-manufacturing-iam-operations
 
 **Author:** Edward E. Spence
-**Organization:** Fairmount Manufacturing LLC
+**Organization:** Fairmont Manufacturing LLC
 **Lab Environment:** IAMPAM.LAB
 **Status:** 🟢 Active — Labs In Progress
 
@@ -36,7 +36,7 @@ In addition to lab documentation, this repository includes a standalone automati
 
 **Domain:** IAMPAM.LAB
 **Network:** 172.31.100.0/24
-**Entra Tenant:** FairmountManufacturing.onmicrosoft.com
+**Entra Tenant:** FairmontManufacturing.onmicrosoft.com
 **Compliance Context:** CMMC Level 2
 
 | System | Role | IP |
@@ -98,7 +98,7 @@ The `automation/` folder contains standalone reusable PowerShell scripts extract
 ### ✅ Lab 01 — Employee Onboarding (JOINER Phase)
 **Ticket:** REQ0042001 | **Status:** ✅ Complete
 
-Provision 10 new Fairmount Manufacturing employees across Engineering, Finance, and IT/Security. Covers full identity lifecycle from AD account creation through Entra ID synchronization, Vault secret access, Delinea PAM governance, least privilege validation, Splunk audit confirmation, and AWS SAML federation.
+Provision 10 new Fairmont Manufacturing employees across Engineering, Finance, and IT/Security. Covers full identity lifecycle from AD account creation through Entra ID synchronization, Vault secret access, Delinea PAM governance, least privilege validation, Splunk audit confirmation, and AWS SAML federation.
 
 **Key Skills Demonstrated:**
 - Bulk AD provisioning with PowerShell error handling
@@ -148,7 +148,7 @@ Detect, investigate, contain, and validate a suspicious privileged account activ
 ## 🗂️ Repository Structure
 
 ```text
-fairmount-manufacturing-iam-operations/
+fairmont-manufacturing-iam-operations/
 ├── README.md                                    ← You are here
 ├── automation/                                  ← Reusable PowerShell scripts
 │   ├── fm-bulk-user-provisioning.ps1

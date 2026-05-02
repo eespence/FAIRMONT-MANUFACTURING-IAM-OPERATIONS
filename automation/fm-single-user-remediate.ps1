@@ -1,10 +1,10 @@
 #Requires -Modules ActiveDirectory
 <#
 .SYNOPSIS
-    Fairmount Manufacturing LLC — Single User Remediation Script
+    Fairmont Manufacturing LLC — Single User Remediation Script
 
 .DESCRIPTION
-    Remediates a single Fairmount Manufacturing user account.
+    Remediates a single Fairmont Manufacturing user account.
 
     Actions available:
         FixGroup      — Add user to a specified AD group
@@ -29,7 +29,7 @@
     Environment: IAMPAM.LAB
     Sync Group:  AAD-Sync-Users (controls Entra Connect scope)
     Run From:    MGMT01 as adm-t0-administrator
-    Repo:        fairmount-manufacturing-iam-operations
+    Repo:        fairmont-manufacturing-iam-operations
 
 .PARAMETER SAM
     SamAccountName. Example: fm.kira.vanthorpe
@@ -110,7 +110,7 @@ $StartTime = Get-Date
 
 Write-Host ""
 Write-Host "============================================================" -ForegroundColor Yellow
-Write-Host " Fairmount Manufacturing — Single User Remediation" -ForegroundColor Yellow
+Write-Host " Fairmont Manufacturing — Single User Remediation" -ForegroundColor Yellow
 Write-Host " Ticket  : $TicketNumber" -ForegroundColor Yellow
 Write-Host " User    : $SAM" -ForegroundColor Yellow
 Write-Host " Action  : $Action" -ForegroundColor Yellow

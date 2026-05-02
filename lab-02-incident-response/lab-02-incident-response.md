@@ -11,7 +11,7 @@
 # Lab 02 — Incident Response: Anomalous Admin Behavior
 
 **Author:** Edward E. Spence
-**Organization:** Fairmount Manufacturing LLC
+**Organization:** Fairmont Manufacturing LLC
 **Lab:** IAMPAM.LAB
 **Version:** 1.1
 **Status:** ✅ Completed

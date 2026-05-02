@@ -1,10 +1,10 @@
 #Requires -Modules ActiveDirectory
 <#
 .SYNOPSIS
-    Fairmount Manufacturing LLC — Single User Provisioning Script
+    Fairmont Manufacturing LLC — Single User Provisioning Script
 
 .DESCRIPTION
-    Provisions a single Fairmount Manufacturing employee account in Active Directory.
+    Provisions a single Fairmont Manufacturing employee account in Active Directory.
 
     Each user is:
         1. Created in OU=IAM-PAM-Users
@@ -17,7 +17,7 @@
     Use this script for:
         - Late hire onboarding after the bulk cohort run
         - Retrying a specific user that failed during bulk provisioning
-        - Adding a new Fairmount employee outside of a bulk onboarding event
+        - Adding a new Fairmont employee outside of a bulk onboarding event
 
 .NOTES
     Author:      Edward E. Spence
@@ -26,7 +26,7 @@
     OU Target:   OU=IAM-PAM-Users,DC=iampam,DC=lab
     Sync Group:  AAD-Sync-Users (CRITICAL — controls Entra Connect scope)
     Run From:    MGMT01 as adm-t0-administrator
-    Repo:        fairmount-manufacturing-iam-operations
+    Repo:        fairmont-manufacturing-iam-operations
 
 .PARAMETER DisplayName
     Full display name. Example: "FM - Kira Vanthorpe"
@@ -106,7 +106,7 @@ $StartTime = Get-Date
 
 Write-Host ""
 Write-Host "============================================================" -ForegroundColor Cyan
-Write-Host " Fairmount Manufacturing — Single User Provisioning" -ForegroundColor Cyan
+Write-Host " Fairmont Manufacturing — Single User Provisioning" -ForegroundColor Cyan
 Write-Host " Ticket     : $TicketNumber" -ForegroundColor Cyan
 Write-Host " User       : $SAM" -ForegroundColor Cyan
 Write-Host " Department : $Department" -ForegroundColor Cyan
