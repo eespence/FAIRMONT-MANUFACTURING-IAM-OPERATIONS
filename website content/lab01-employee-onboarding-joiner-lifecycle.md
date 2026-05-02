@@ -6,19 +6,19 @@
 
 Enterprise identity onboarding is not just creating user accounts. It is a coordinated lifecycle operation that spans Active Directory provisioning, cloud identity synchronization, least privilege validation, audit logging, and federated cloud access — all executed in the correct sequence with full error handling and audit evidence.
 
-This lab simulates the JOINER phase of the identity lifecycle for Fairmount Manufacturing LLC — a fictional aerospace components manufacturer operating under CMMC Level 2 compliance requirements. 10 employees are onboarded across Engineering, Finance, and IT/Security using real enterprise infrastructure.
+This lab simulates the JOINER phase of the identity lifecycle for Fairmont Manufacturing LLC — a fictional aerospace components manufacturer operating under CMMC Level 2 compliance requirements. 10 employees are onboarded across Engineering, Finance, and IT/Security using real enterprise infrastructure.
 
 ---
 
 ## Business Scenario
 
-**Organization:** Fairmount Manufacturing LLC
+**Organization:** Fairmont Manufacturing LLC
 **Industry:** Aerospace Components Manufacturing
 **Compliance:** CMMC Level 2
 **Ticket:** REQ0042001 — New Employee Onboarding — Bulk Provisioning
 **Submitted By:** HR Director — Marcus Webb
 
-> Fairmount Manufacturing is onboarding 10 employees across Engineering, Finance, and IT/Security. All accounts must be provisioned in Active Directory, synchronized to Entra ID, granted group-based access, and validated across PAM platforms before start date.
+> Fairmont Manufacturing is onboarding 10 employees across Engineering, Finance, and IT/Security. All accounts must be provisioned in Active Directory, synchronized to Entra ID, granted group-based access, and validated across PAM platforms before start date.
 
 ---
 
@@ -138,7 +138,7 @@ AWS SAML access was validated for `fm.seren.holwick` as the IT-Admins representa
 
 **Ticket:** REQ0042001 — **Status:** Resolved
 
-All 10 Fairmount Manufacturing employee accounts provisioned in Active Directory, synchronized to Microsoft Entra ID, and group-based access control enforced per department. Least privilege validated — standard users denied privileged system access. All provisioning activity confirmed in Splunk. AWS federated access confirmed for IT-Admins. Provisioning results exported to CSV for audit evidence.
+All 10 Fairmont Manufacturing employee accounts provisioned in Active Directory, synchronized to Microsoft Entra ID, and group-based access control enforced per department. Least privilege validated — standard users denied privileged system access. All provisioning activity confirmed in Splunk. AWS federated access confirmed for IT-Admins. Provisioning results exported to CSV for audit evidence.
 
 ---
 
@@ -152,4 +152,4 @@ Most organizations onboard employees through manual processes with no audit trai
 
 ---
 
-**E.E. Spence — IAM/PAM Engineering | Fairmount Manufacturing LLC**
+**E.E. Spence — IAM/PAM Engineering | Fairmont Manufacturing LLC**

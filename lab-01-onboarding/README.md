@@ -11,7 +11,7 @@
 # Lab 01 — Employee Onboarding (JOINER Phase)
 
 **Author:** Edward E. Spence
-**Organization:** Fairmount Manufacturing LLC
+**Organization:** Fairmont Manufacturing LLC
 **Lab:** IAMPAM.LAB
 **Version:** 1.5
 **Status:** ✅ Complete
@@ -26,7 +26,7 @@ This lab simulates an enterprise Identity and Access Management onboarding workf
 
 ## 🎯 Business Scenario
 
-**Organization:** Fairmount Manufacturing LLC
+**Organization:** Fairmont Manufacturing LLC
 **Industry:** Aerospace Components Manufacturing
 **Compliance Context:** CMMC Level 2
 **Ticket:** REQ0042001
@@ -128,7 +128,7 @@ $users = @(
 )
 
 $OU = "OU=IAM-PAM-Users,DC=iampam,DC=lab"
-$Password = ConvertTo-SecureString "Welcome@Fairmount2026!" -AsPlainText -Force
+$Password = ConvertTo-SecureString "Welcome@Fairmont2026!" -AsPlainText -Force
 $Results = @()
 
 foreach ($user in $users) {
@@ -253,8 +253,8 @@ Vault policies were created and mapped to AD groups to enforce least privilege.
 Standard user policy:
 
 ```bash
-vault policy write fairmount-users - <<EOF
-path "secret/data/fairmount/*" {
+vault policy write fairmont-users - <<EOF
+path "secret/data/fairmont/*" {
   capabilities = ["read", "list"]
 }
 EOF
@@ -263,8 +263,8 @@ EOF
 IT-Admins elevated policy:
 
 ```bash
-vault policy write fairmount-it-admins - <<EOF
-path "secret/data/fairmount/*" {
+vault policy write fairmont-it-admins - <<EOF
+path "secret/data/fairmont/*" {
   capabilities = ["create", "read", "update", "delete", "list"]
 }
 EOF
@@ -273,10 +273,10 @@ EOF
 AD group to policy mapping:
 
 ```bash
-vault write auth/ldap/groups/IT-Admins    policies=fairmount-it-admins
-vault write auth/ldap/groups/ENG-Users    policies=fairmount-users
-vault write auth/ldap/groups/FIN-Users    policies=fairmount-users
-vault write auth/ldap/groups/SEC-Analysts policies=fairmount-users
+vault write auth/ldap/groups/IT-Admins    policies=fairmont-it-admins
+vault write auth/ldap/groups/ENG-Users    policies=fairmont-users
+vault write auth/ldap/groups/FIN-Users    policies=fairmont-users
+vault write auth/ldap/groups/SEC-Analysts policies=fairmont-users
 ```
 
 ![Vault Policies Created](screenshots/lab01_06_vault_policies_created.png)
@@ -289,25 +289,25 @@ vault write auth/ldap/groups/SEC-Analysts policies=fairmount-users
 Department-aligned service account credentials were stored as secrets.
 
 ```bash
-vault kv put secret/fairmount/engineering \
+vault kv put secret/fairmont/engineering \
     app_api_key="ENG-2026-FM-API-001" \
-    shared_service_account="svc.eng.fairmount"
+    shared_service_account="svc.eng.fairmont"
 
-vault kv put secret/fairmount/finance \
+vault kv put secret/fairmont/finance \
     reporting_key="FIN-2026-FM-RPT-001" \
-    audit_service_account="svc.fin.fairmount"
+    audit_service_account="svc.fin.fairmont"
 
-vault kv put secret/fairmount/it \
+vault kv put secret/fairmont/it \
     admin_token="IT-2026-FM-ADM-001" \
-    monitoring_key="svc.it.fairmount"
+    monitoring_key="svc.it.fairmont"
 ```
 
 Validation included successfully reading expected secrets.
 
 ```bash
-vault kv get secret/fairmount/engineering
-vault kv get secret/fairmount/finance
-vault kv get secret/fairmount/it
+vault kv get secret/fairmont/engineering
+vault kv get secret/fairmont/finance
+vault kv get secret/fairmont/it
 ```
 
 ![Vault Secrets Created](screenshots/lab01_08_vault_secrets_created.png)
@@ -323,7 +323,7 @@ Least privilege was validated by attempting access outside of approved roles.
 ssh fm.kira.vanthorpe@rhel01.iampam.lab
 # Expected: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password)
 
-vault kv get secret/fairmount/it
+vault kv get secret/fairmont/it
 # Expected for non-IT users: permission denied
 ```
 
@@ -339,10 +339,10 @@ SSH on RHEL01 is restricted via `AllowGroups rhel-admins`. Fairmount standard us
 
 Department folders were created in Delinea Secret Server and aligned to the Fairmount structure.
 
-- `Fairmount Manufacturing`
-  - `Fairmount Manufacturing/Engineering`
-  - `Fairmount Manufacturing/Finance`
-  - `Fairmount Manufacturing/IT-Security`
+- `Fairmont Manufacturing`
+  - `Fairmont Manufacturing/Engineering`
+  - `Fairmont Manufacturing/Finance`
+  - `Fairmont Manufacturing/IT-Security`
 
 ![Delinea Folders](screenshots/lab01_12_delinea_folders.png)
 
@@ -354,17 +354,17 @@ Secrets were placed into the correct department folders.
 
 **Engineering folder:**
 - Secret Name: `FM Engineering Service Account`
-- Username: `svc.eng.fairmount`
+- Username: `svc.eng.fairmont`
 - Password: (generate)
 
 **Finance folder:**
 - Secret Name: `FM Finance Reporting Account`
-- Username: `svc.fin.fairmount`
+- Username: `svc.fin.fairmont`
 - Password: (generate)
 
 **IT-Security folder:**
 - Secret Name: `FM IT Admin Account`
-- Username: `svc.it.fairmount`
+- Username: `svc.it.fairmont`
 - Password: (generate)
 
 ![Engineering Folder Secret](screenshots/lab01_13A_engineering_folder_svc.eng.fairmount.png)
@@ -413,7 +413,7 @@ index=wineventlog EventCode=4720
 | sort _time
 ```
 
-This confirms that all Fairmount users were successfully created in Active Directory by the privileged administrator account.
+This confirms that all Fairmont users were successfully created in Active Directory by the privileged administrator account.
 
 ![Splunk User Creation](screenshots/lab01_15_splunk_user_creation.png)
 
@@ -432,7 +432,7 @@ This validates that each user was added to the correct RBAC group, including dep
 
 ### 🎯 Validation Outcome
 
-All 10 Fairmount users were successfully created and assigned to the correct groups. All actions were performed by the privileged account `adm-t0-administrator`. Splunk visibility confirms that identity lifecycle events are logged, RBAC enforcement is auditable, and the onboarding workflow is traceable end-to-end.
+All 10 Fairmont users were successfully created and assigned to the correct groups. All actions were performed by the privileged account `adm-t0-administrator`. Splunk visibility confirms that identity lifecycle events are logged, RBAC enforcement is auditable, and the onboarding workflow is traceable end-to-end.
 
 ### 🧠 Engineering Note
 
@@ -509,7 +509,7 @@ Invoke-Command -ComputerName ID-SYNC01 -ScriptBlock {
 
 ### Scenario B — Full Bulk Rollback
 
-Use this when the entire Fairmount onboarding batch must be reversed.
+Use this when the entire Fairmont onboarding batch must be reversed.
 
 ```powershell
 $users = @(
@@ -552,9 +552,9 @@ Optional post-rollback cleanup:
 - Remove Vault secrets if onboarding is cancelled:
 
 ```bash
-vault kv delete secret/fairmount/engineering
-vault kv delete secret/fairmount/finance
-vault kv delete secret/fairmount/it
+vault kv delete secret/fairmont/engineering
+vault kv delete secret/fairmont/finance
+vault kv delete secret/fairmont/it
 ```
 
 - Remove Delinea secrets or folders if no longer needed — navigate to each Fairmount folder in Delinea and delete manually.
@@ -619,11 +619,11 @@ This preserves architectural correctness while documenting the licensing limitat
 - All user creation performed from MGMT01 per PAW model
 - `fm.` prefix ensures lab users are clearly distinguishable from existing accounts
 - All user names are entirely fictional — no real individuals referenced
-- Password set to `Welcome@Fairmount2026!` with forced change at next logon
+- Password set to `Welcome@Fairmont2026!` with forced change at next logon
 - Error handling in the creation script ensures partial failures do not go undetected
 - Provisioning results are exported to CSV for audit trail — tracks UserCreated, GroupAdded, and SyncScoped
 - Vault LDAP binddn must match actual adm-t0-administrator OU path in your environment
-- Vault policies scoped to `secret/fairmount/*` to isolate Fairmount secrets
+- Vault policies scoped to `secret/fairmont/*` to isolate Fairmount secrets
 - Delinea folder structure mirrors department hierarchy for clean RBAC
 - Standard users are intentionally denied SSH access to privileged Linux systems to validate least privilege
 - Privileged service accounts are stored as secrets, not used as interactive user identities

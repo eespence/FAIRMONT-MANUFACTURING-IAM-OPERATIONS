@@ -6,13 +6,13 @@
 
 Provisioning user accounts is only half of the onboarding equation. The other half is ensuring those identities can only access the secrets and privileged resources they are authorized to use — nothing more. This is where Privileged Access Management governance begins.
 
-This article covers the PAM governance layer of the Fairmount Manufacturing onboarding workflow — HashiCorp Vault LDAP integration, RBAC policy mapping, department secret creation, and Delinea Secret Server folder-based access control. Together these controls ensure that privileged credentials are stored securely, accessed only through policy-enforced paths, and governed by the same group-based model as the rest of the identity architecture.
+This article covers the PAM governance layer of the Fairmont Manufacturing onboarding workflow — HashiCorp Vault LDAP integration, RBAC policy mapping, department secret creation, and Delinea Secret Server folder-based access control. Together these controls ensure that privileged credentials are stored securely, accessed only through policy-enforced paths, and governed by the same group-based model as the rest of the identity architecture.
 
 ---
 
 ## Business Context
 
-**Organization:** Fairmount Manufacturing LLC
+**Organization:** Fairmont Manufacturing LLC
 **Ticket:** REQ0042001 — New Employee Onboarding
 **Compliance:** CMMC Level 2
 
@@ -50,20 +50,20 @@ Key configuration:
 
 Two Vault policies were created to enforce least privilege secret access:
 
-**fairmount-users** — standard department users:
+**fairmont-users** — standard department users:
 - Capabilities: `read` and `list` on `secret/data/fairmount/*`
 
-**fairmount-it-admins** — IT-Admins elevated access:
+**fairmont-it-admins** — IT-Admins elevated access:
 - Capabilities: `create`, `read`, `update`, `delete`, `list` on `secret/data/fairmount/*`
 
 AD groups were then mapped to these policies:
 
 | AD Group | Vault Policy |
 |---|---|
-| IT-Admins | fairmount-it-admins |
-| ENG-Users | fairmount-users |
-| FIN-Users | fairmount-users |
-| SEC-Analysts | fairmount-users |
+| IT-Admins | fairmont-it-admins |
+| ENG-Users | fairmont-users |
+| FIN-Users | fairmont-users |
+| SEC-Analysts | fairmont-users |
 
 This means group membership in Active Directory directly controls what a user can do in Vault — no separate access management required.
 
@@ -77,9 +77,9 @@ This means group membership in Active Directory directly controls what a user ca
 
 Department-aligned service account credentials were stored as secrets in Vault at scoped paths:
 
-- `secret/fairmount/engineering` — ENG API key and service account
-- `secret/fairmount/finance` — FIN reporting key and audit service account
-- `secret/fairmount/it` — IT admin token and monitoring key
+- `secret/fairmont/engineering` — ENG API key and service account
+- `secret/fairmont/finance` — FIN reporting key and audit service account
+- `secret/fairmont/it` — IT admin token and monitoring key
 
 Secrets are stored at department level — not at individual user level. This means removing a single user from AD does not require Vault secret deletion — only group membership controls access.
 
@@ -93,9 +93,9 @@ Secrets are stored at department level — not at individual user level. This me
 
 Department folders were created in Delinea Secret Server aligned to the Fairmount organizational structure:
 
-- `Fairmount Manufacturing/Engineering`
-- `Fairmount Manufacturing/Finance`
-- `Fairmount Manufacturing/IT-Security`
+- `Fairmont Manufacturing/Engineering`
+- `Fairmont Manufacturing/Finance`
+- `Fairmont Manufacturing/IT-Security`
 
 [ SCREENSHOT: lab01_12_delinea_folders ]
 
@@ -107,15 +107,15 @@ Service account credentials were placed into the correct department folders:
 
 | Folder | Secret Name | Username |
 |---|---|---|
-| Engineering | FM Engineering Service Account | svc.eng.fairmount |
-| Finance | FM Finance Reporting Account | svc.fin.fairmount |
-| IT-Security | FM IT Admin Account | svc.it.fairmount |
+| Engineering | FM Engineering Service Account | svc.eng.fairmont |
+| Finance | FM Finance Reporting Account | svc.fin.fairmont |
+| IT-Security | FM IT Admin Account | svc.it.fairmont |
 
-[ SCREENSHOT: lab01_13A_engineering_folder_svc.eng.fairmount ]
+[ SCREENSHOT: lab01_13A_engineering_folder_svc.eng.fairmont ]
 
-[ SCREENSHOT: lab01_13B_finance_folder_svc.fin.fairmount ]
+[ SCREENSHOT: lab01_13B_finance_folder_svc.fin.fairmont ]
 
-[ SCREENSHOT: lab01_13C_it_security_folder_svc.it.fairmount ]
+[ SCREENSHOT: lab01_13C_it_security_folder_svc.it.fairmont ]
 
 ---
 
@@ -130,7 +130,7 @@ Folder-level permissions were assigned enforcing department-aligned access contr
 | FIN-Approvers | Finance | Read |
 | FIN-Auditors | Finance | Read |
 | IT-Admins | IT-Security | Owner |
-| SEC-Analysts | All Fairmount folders | Read |
+| SEC-Analysts | All Fairmont folders | Read |
 
 **Licensing Note:** Due to single-user licensing constraints in the lab environment, direct Active Directory integration with Delinea Secret Server could not be completed. AD group structure was replicated using local Delinea groups to maintain architectural accuracy. This ensures that once AD integration is enabled, group synchronization can occur without requiring redesign of access controls — preserving full architectural integrity.
 
@@ -162,4 +162,4 @@ Without PAM governance, privileged credentials are stored wherever is convenient
 
 ---
 
-**E.E. Spence — IAM/PAM Engineering | Fairmount Manufacturing LLC**
+**E.E. Spence — IAM/PAM Engineering | Fairmont Manufacturing LLC**

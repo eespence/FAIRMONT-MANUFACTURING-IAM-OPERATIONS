@@ -6,13 +6,13 @@
 
 Identity is one of the most targeted attack surfaces in enterprise environments. When a privileged account starts behaving anomalously — logging in from unexpected systems, generating failed authentication events, or accessing resources outside its normal pattern — the response needs to be fast, structured, and fully auditable.
 
-This lab simulates a real-world identity security incident at Fairmount Manufacturing LLC. Splunk detected suspicious privileged account activity for `adm-t1-serveradmin` — a Tier 1 server administrator account that began generating anomalous login behavior including authentication attempts from an unauthorized system. The full IR lifecycle was executed — detection, investigation, containment, and validation.
+This lab simulates a real-world identity security incident at Fairmont Manufacturing LLC. Splunk detected suspicious privileged account activity for `adm-t1-serveradmin` — a Tier 1 server administrator account that began generating anomalous login behavior including authentication attempts from an unauthorized system. The full IR lifecycle was executed — detection, investigation, containment, and validation.
 
 ---
 
 ## Incident Overview
 
-**Organization:** Fairmount Manufacturing LLC
+**Organization:** Fairmont Manufacturing LLC
 **Ticket:** INC0043102
 **Severity:** High
 **Type:** Suspicious Privileged Activity
@@ -152,8 +152,8 @@ A privileged account authenticating from a Tier 2 workstation is not just a poli
 
 ---
 
-👉 **[View Full Lab on GitHub](https://github.com/eespence/fairmount-manufacturing-iam-operations)**
+👉 **[View Full Lab on GitHub](https://github.com/eespence/fairmont-manufacturing-iam-operations)**
 
 ---
 
-**E.E. Spence — IAM/PAM Engineering | Fairmount Manufacturing LLC**
+**E.E. Spence — IAM/PAM Engineering | Fairmont Manufacturing LLC**
