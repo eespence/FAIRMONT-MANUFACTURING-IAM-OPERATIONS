@@ -7,7 +7,7 @@
 ![CMMC](https://img.shields.io/badge/CMMC-Level_2-blue?style=flat)
 ![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE?style=flat&logo=powershell&logoColor=white)
 
-# fairmont-manufacturing-iam-operations
+# FAIRMONT-MANUFACTURING-IAM-OPERATIONS
 
 **Author:** Edward E. Spence
 **Organization:** Fairmont Manufacturing LLC
