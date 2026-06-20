@@ -1,11 +1,35 @@
-![Active Directory](https://img.shields.io/badge/Active_Directory-0078D4?style=flat&logo=microsoft&logoColor=white)
-![Microsoft Entra ID](https://img.shields.io/badge/Microsoft_Entra_ID-0078D4?style=flat&logo=microsoftazure&logoColor=white)
-![HashiCorp Vault](https://img.shields.io/badge/HashiCorp_Vault-1.16-black?style=flat&logo=vault&logoColor=white)
-![Delinea Secret Server](https://img.shields.io/badge/Delinea-Secret_Server-purple?style=flat)
-![Splunk](https://img.shields.io/badge/Splunk-000000?style=flat&logo=splunk&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-SAML_Federation-FF9900?style=flat&logo=amazonaws&logoColor=white)
-![CMMC](https://img.shields.io/badge/CMMC-Level_2-blue?style=flat)
-![PowerShell](https://img.shields.io/badge/PowerShell-Automation-5391FE?style=flat&logo=powershell&logoColor=white)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/eespence/HYBRID-IDENTITY-ACCESS-MGMT/main/branding/FM-Horizontal-Cropped.png" width="650">
+</p>
+
+<h1 align="center">Identity Operations & Governance Lab</h1>
+
+<p align="center">
+  <strong>Enterprise IAM Operations | IAMPAM.LAB</strong>
+</p>
+
+<p align="center">
+  <em>Fairmont Manufacturing — Precision. Security. Mission Success.</em>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Active_Directory-0078D4?style=flat&logo=microsoft&logoColor=white">
+  <img src="https://img.shields.io/badge/Microsoft_Entra_ID-0078D4?style=flat&logo=microsoftazure&logoColor=white">
+  <img src="https://img.shields.io/badge/HashiCorp_Vault-1.16-black?style=flat&logo=vault&logoColor=white">
+  <img src="https://img.shields.io/badge/Delinea-Secret_Server-purple?style=flat">
+  <img src="https://img.shields.io/badge/Splunk-000000?style=flat&logo=splunk&logoColor=white">
+  <img src="https://img.shields.io/badge/AWS-SAML_Federation-FF9900?style=flat&logo=amazonaws&logoColor=white">
+  <img src="https://img.shields.io/badge/CMMC-Level_2-blue?style=flat">
+  <img src="https://img.shields.io/badge/PowerShell-Automation-5391FE?style=flat&logo=powershell&logoColor=white">
+</p>
+
+---
+
+Enterprise IAM operations repository demonstrating joiner, mover, leaver workflows, access governance, privileged access operations, incident response, audit validation, compliance evidence generation, and identity lifecycle management across the Fairmont Manufacturing environment.
+
+← [Back to IAMPAM.LAB Ecosystem](https://github.com/eespence/HYBRID-IDENTITY-ACCESS-MGMT)
+
+---
 
 # FAIRMONT-MANUFACTURING-IAM-OPERATIONS
 

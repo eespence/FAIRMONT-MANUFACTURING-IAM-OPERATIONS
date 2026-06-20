@@ -57,7 +57,7 @@ param (
 # ============================================================
 
 $OU        = "OU=IAM-PAM-Users,DC=iampam,DC=lab"
-$Domain    = "fairmontmanufacturing.onmicrosoft.com"
+$Domain    = "FairmontManufacturingLLC.onmicrosoft.com"
 $SyncGroup = "AAD-Sync-Users"
 $Password  = ConvertTo-SecureString "Welcome@Fairmont2026!" -AsPlainText -Force
 
