@@ -206,4 +206,4 @@ Manual IAM operations are slow, error-prone, and leave no audit trail. These scr
 
 ---
 
-**E.E. Spence — IAM/PAM Engineering | Fairmont Manufacturing LLC**
+**E.E. Spence — IAM/PAM Engineering | Fairmont Manufacturing**

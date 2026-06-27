@@ -1,7 +1,7 @@
 #Requires -Modules ActiveDirectory
 <#
 .SYNOPSIS
-    Fairmont Manufacturing LLC — Bulk User Rollback Script
+    Fairmont Manufacturing — Bulk User Rollback Script
     Ticket: REQ0042001
 
 .DESCRIPTION

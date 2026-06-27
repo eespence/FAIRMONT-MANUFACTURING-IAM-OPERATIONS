@@ -1,7 +1,7 @@
 #Requires -Modules ActiveDirectory
 <#
 .SYNOPSIS
-    Fairmont Manufacturing LLC — Single User Provisioning Script
+    Fairmont Manufacturing — Single User Provisioning Script
 
 .DESCRIPTION
     Provisions a single Fairmont Manufacturing employee account in Active Directory.

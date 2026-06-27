@@ -1,7 +1,7 @@
 #Requires -Modules ActiveDirectory
 <#
 .SYNOPSIS
-    Fairmont Manufacturing LLC — Single User Remediation Script
+    Fairmont Manufacturing — Single User Remediation Script
 
 .DESCRIPTION
     Remediates a single Fairmont Manufacturing user account.

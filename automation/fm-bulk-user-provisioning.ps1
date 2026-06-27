@@ -2,7 +2,7 @@
 #Requires -Modules ActiveDirectory
 <#
 .SYNOPSIS
-    Fairmont Manufacturing LLC — Bulk User Provisioning Script
+    Fairmont Manufacturing — Bulk User Provisioning Script
     Ticket: REQ0042001
 
 .DESCRIPTION
@@ -57,7 +57,7 @@ param (
 # ============================================================
 
 $OU        = "OU=IAM-PAM-Users,DC=iampam,DC=lab"
-$Domain    = "FairmontManufacturingLLC.onmicrosoft.com"
+$Domain    = "FairmontManufacturing.onmicrosoft.com"
 $SyncGroup = "AAD-Sync-Users"
 $Password  = ConvertTo-SecureString "Welcome@Fairmont2026!" -AsPlainText -Force
 
